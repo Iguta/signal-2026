@@ -1,11 +1,6 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
-  background-color: #0c0f17;
-  color: #f5f7ff;
+  min-height: 100vh;
 }
 
 button,
