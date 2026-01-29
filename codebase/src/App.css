@@ -1,0 +1,244 @@
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, rgba(79, 180, 255, 0.15), transparent 45%),
+    radial-gradient(circle at 20% 20%, rgba(255, 94, 197, 0.2), transparent 40%), #0e1117;
+  color: #f5f7ff;
+  padding: 3rem clamp(1rem, 4vw, 4rem) 4rem;
+  font-family: 'Inter', 'SF Pro Display', system-ui, sans-serif;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 4vw, 3.4rem);
+  margin: 0.4rem 0;
+  line-height: 1.2;
+}
+
+.hero .intro {
+  max-width: 36rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 1.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+button {
+  border-radius: 999px;
+  border: 0;
+  padding: 0.85rem 1.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+button.primary {
+  background: linear-gradient(135deg, #8e8dfa, #5c7df8);
+  color: white;
+  box-shadow: 0 10px 30px rgba(92, 125, 248, 0.35);
+}
+
+button.ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #e8ebfc;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.hero-stats {
+  display: grid;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  backdrop-filter: blur(20px);
+}
+
+.stat-label {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.stat-value {
+  font-size: 2rem;
+  margin: 0.25rem 0;
+}
+
+.stat-detail {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.tasks-grid,
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.panel {
+  background: rgba(19, 23, 32, 0.9);
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.panel-header strong {
+  display: block;
+  font-size: 1.3rem;
+}
+
+.pill {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.progress-bar {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(135deg, #50ccff, #7b5bff);
+  border-radius: 999px;
+}
+
+.calendar-panel {
+  min-height: 360px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 0.75rem;
+}
+
+.calendar-day {
+  border-radius: 1rem;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.calendar-day.low {
+  border-color: rgba(46, 204, 113, 0.4);
+}
+
+.calendar-day.medium {
+  border-color: rgba(241, 196, 15, 0.4);
+}
+
+.calendar-day.high {
+  border-color: rgba(231, 76, 60, 0.5);
+}
+
+.day-number {
+  font-weight: 600;
+}
+
+.task-dots {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.task-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #8e8dfa;
+}
+
+.goals-grid ul {
+  margin: 0;
+  padding-left: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.insight-panel {
+  justify-content: space-between;
+}
+
+.pulse {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pulse span {
+  padding: 0.4rem 0.9rem;
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.85rem;
+}
+
+.dashboards .dash-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.dash-grid .panel {
+  text-transform: none;
+}
+
+@media (max-width: 600px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
